@@ -12,7 +12,7 @@ export class AppFooterComponent {
   // Datos para los pipes
   readonly author = signal('Domenica Uyunkar');
   readonly today = signal(new Date());
-  readonly projectCost = signal(1250.50);
+  readonly projectCost = signal(14005.50);
   readonly completionRate = signal(0.85);
   readonly techStack = signal({ framework: 'Angular', version: 21 });
 }
