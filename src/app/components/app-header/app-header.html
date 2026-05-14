@@ -1,22 +1,29 @@
-<header class ="header">
-  <h1>{{ brand() }}</h1>
-  
-    <button (click)="changeBrand()">
-        Modificar Titulo
-    </button>
-    <button (click)="resetBrand()"
-            [disabled]="brand() === 'PPW Angular'"]
-          >
-        Resetear Titulo
-    </button>
-    <button (click)="toggleInfo()">
+<header class="header">
+
+  <h1>{{ brand() | uppercase }}</h1>
+
+  <div class="actions">
+
+    <button type="button" (click)="toggleInfo()">
       {{ toggleLabel() }}
     </button>
-  
 
+    <button type="button" (click)="changeBrand()">
+      Modificar Título
+    </button>
 
-  @if(showInfo()){
-    <h3>Show Info es TRUE por eso muestra la información</h3>
+    <button
+      type="button"
+      (click)="resetBrand()"
+      [disabled]="brand() === 'PPW Angular 21'"
+    >
+      Resetear Título
+    </button>
+
+  </div>
+
+  @if (showInfo()) {
+    <p>La informacion es true</p>
   }
 
 </header>

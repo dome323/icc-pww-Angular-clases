@@ -1,34 +1,32 @@
-import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
-import { signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app-header.html',
-  styleUrls: ['./app-header.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './app-header.css',
 })
-export class AppHeader {
-  readonly brand = signal("PPW Angular")
+export class AppHeaderComponent {
+
+  readonly brand = signal('PPW Angular 21');
+
   readonly showInfo = signal(false);
 
-  readonly toggleLabel = computed(
-    () => 
-      (this.showInfo() 
-    ? "Ocultar información" 
-    : "Mostrar información"));
-  toggleInfo(){
-    this.showInfo.update((valor) => !valor);
+  readonly toggleLabel = computed(() =>
+    this.showInfo() ? 'Ocultar info' : 'Mostrar info'
+  );
+
+  toggleInfo(): void {
+    this.showInfo.update((value) => !value);
   }
 
-  changeBrand() : void {
-    this.brand.update((valor) => valor + '!');
+  changeBrand(): void {
+    this.brand.update((b) => b + '!');
   }
 
-  resetBrand() : void {
-    this.brand.set("PPW Angular");
+  resetBrand(): void {
+    this.brand.set('PPW Angular 21');
   }
-
-
-
 }

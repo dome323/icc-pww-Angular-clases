@@ -1,11 +1,15 @@
-.header{
-    display: flex;
-    flex-direction: comlumn;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-button{
-    width: fit-content;
+.actions {
+  display: flex;
+  gap: 10px;
+}
 
+button {
+  width: fit-content;
 }
