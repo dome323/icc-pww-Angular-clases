@@ -1,10 +1,10 @@
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+.hero {
+  border: 1px solid #d7deea;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #ffffff;
 }
 
-button {
-  width: fit-content;
+ul {
+  margin-top: 10px;
 }
